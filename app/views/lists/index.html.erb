@@ -1,0 +1,21 @@
+<div>
+  <h1>Your list</h1>
+  <div>
+    <%= link_to "Add a new list", new_list_path, class: "btn btn-flat btn-warning" %>
+  </div>
+
+  <br>
+
+  <div>
+    <% @lists.each do|list| %>
+      <%= link_to list.name, list_path(list), class:"text-decoration-none" %>
+    <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path('movie.jpg') %>)">
+    <% end %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= link_to "Back to your list", lists_path, class: "btn btn-success" %>
+  </div>
+</div>
